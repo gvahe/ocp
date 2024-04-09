@@ -1,0 +1,1438 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Open Catalyst datasets &#8212; Open Catalyst Project Documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'core/DATASET';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Frequently Asked Questions" href="FAQ.html" />
+    <link rel="prev" title="ocp by Open Catalyst Project" href="README.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="README.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Open Catalyst Project Documentation - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Open Catalyst Project Documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="README.html">
+                    ocp by Open Catalyst Project
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Core Installation/Usage</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Open Catalyst datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQ.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="INSTALL.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LICENSE.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MODELS.html">Pretrained OCP models</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="TRAIN.html">Training and evaluating models on OCP datasets</a></li>
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorial</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/intro.html">Utilizing large, graph-based, pre-trained  machine learned potentials in atomistic simulations</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/OCP-introduction.html">Introduction to using OCP in molecular simulations</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/fine-tuning/fine-tuning-oxides.html">Fine tuning a model</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/gotchas.html">Common gotchas with OCP</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tutorial/advanced/fine-tuning-toc.html">Advanced example: Fine-tuning</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/advanced/fine-tuning-in-python.html">Fine-tuning with Python</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/advanced/embedding-monkeypatch.html">Embedding monkeypatching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/advanced/embeddings.html">Working with embeddings</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/advanced/mass-inference.html">Mass inference</a></li>
+
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tutorial/NRR/NRR_toc.html">Screening catalysts with OCP</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/NRR/NRR_example.html">Using OCP to enumerate adsorbates on catalyst surfaces</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/NRR/NRR_example-gemnet.html">Using OCP to enumerate adsorbates on alloy catalyst surfaces</a></li>
+
+
+
+
+
+
+
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ocpmodels documentation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">API documentation</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../_autosummary/ocpmodels.html">ocpmodels</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../_autosummary/ocpmodels.common.html">ocpmodels.common</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../_autosummary/ocpmodels.common.distutils.html">ocpmodels.common.distutils</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../_autosummary/ocpmodels.common.flags.html">ocpmodels.common.flags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../_autosummary/ocpmodels.common.gp_utils.html">ocpmodels.common.gp_utils</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../_autosummary/ocpmodels.common.registry.html">ocpmodels.common.registry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../_autosummary/ocpmodels.common.relaxation.html">ocpmodels.common.relaxation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../_autosummary/ocpmodels.common.typing.html">ocpmodels.common.typing</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../_autosummary/ocpmodels.models.html">ocpmodels.models</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../_autosummary/ocpmodels.models.gemnet.html">ocpmodels.models.gemnet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../_autosummary/ocpmodels.models.gemnet_gp.html">ocpmodels.models.gemnet_gp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../_autosummary/ocpmodels.models.gemnet_oc.html">ocpmodels.models.gemnet_oc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../_autosummary/ocpmodels.models.painn.html">ocpmodels.models.painn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../_autosummary/ocpmodels.models.scn.html">ocpmodels.models.scn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../_autosummary/ocpmodels.models.utils.html">ocpmodels.models.utils</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../_autosummary/ocpmodels.modules.html">ocpmodels.modules</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../_autosummary/ocpmodels.modules.evaluator.html">ocpmodels.modules.evaluator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../_autosummary/ocpmodels.modules.exponential_moving_average.html">ocpmodels.modules.exponential_moving_average</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../_autosummary/ocpmodels.modules.loss.html">ocpmodels.modules.loss</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../_autosummary/ocpmodels.modules.normalizer.html">ocpmodels.modules.normalizer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../_autosummary/ocpmodels.modules.scaling.html">ocpmodels.modules.scaling</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Open-Catalyst-Project/ocp" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Open-Catalyst-Project/ocp/issues/new?title=Issue%20on%20page%20%2Fcore/DATASET.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/core/DATASET.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Open Catalyst datasets</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-catalyst-2020-oc20">Open Catalyst 2020 (OC20)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-and-preprocess-the-dataset">Download and preprocess the dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-to-energy-and-forces-s2ef-task">Structure to Energy and Forces (S2EF) task</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-structure-to-relaxed-structure-is2rs-and-initial-structure-to-relaxed-energy-is2re-tasks">Initial Structure to Relaxed Structure (IS2RS) and Initial Structure to Relaxed Energy (IS2RE) tasks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relaxation-trajectories">Relaxation Trajectories</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adsorbate-catalyst-system-trajectories-optional-download">Adsorbate+catalyst system trajectories (optional download)</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#per-adsorbate-trajectories-optional-download">Per-adsorbate trajectories (optional download)</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#catalyst-system-trajectories-optional-download">Catalyst system trajectories (optional download)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bader-charge-data">Bader charge data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#oc20-mappings">OC20 mappings</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-mapping-information">Data mapping information</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adsorbate-catalyst-system-to-catalyst-system-mapping-information">Adsorbate-catalyst system to catalyst system mapping information</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-changelog">Dataset changelog</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#september-2021">September 2021</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#march-2021">March 2021</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#version-2-feb-2021">Version 2, Feb 2021</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-oct-2020">Version 1, Oct 2020</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citing-oc20">Citing OC20</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-catalyst-2022-oc22">Open Catalyst 2022 (OC22)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-to-total-energy-and-forces-s2ef-total-task">Structure to Total Energy and Forces (S2EF-Total) task</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-structure-to-relaxed-structure-is2rs-and-initial-structure-to-relaxed-total-energy-is2re-total-tasks">Initial Structure to Relaxed Structure (IS2RS) and Initial Structure to Relaxed Total Energy (IS2RE-Total) tasks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Relaxation Trajectories</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#system-trajectories-optional-download">System trajectories (optional download)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#oc22-mappings">OC22 Mappings</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Data mapping information</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#oc20-reference-information">OC20 reference information</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citing-oc22">Citing OC22</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-direct-air-capture-2023-odac23">Open Direct Air Capture 2023 (ODAC23)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Structure to Energy and Forces (S2EF) task</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-structure-to-relaxed-structure-is2rs-relaxed-energy-is2re-tasks">Initial Structure to Relaxed Structure (IS2RS) / Relaxed Energy (IS2RE) tasks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ddec-charges">DDEC Charges</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citing-odac23">Citing ODAC23</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="open-catalyst-datasets">
+<h1>Open Catalyst datasets<a class="headerlink" href="#open-catalyst-datasets" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="#open-catalyst-2020-oc20"><span class="xref myst">Open Catalyst 2020 (OC20)</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#download-and-preprocess-the-dataset"><span class="xref myst">Scripts to download and preprocess the data</span></a></p></li>
+<li><p><a class="reference internal" href="#structure-to-energy-and-forces-s2ef-task"><span class="xref myst">Structure to Energy and Forces (S2EF)</span></a></p></li>
+<li><p><a class="reference internal" href="#initial-structure-to-relaxed-structure-is2rs-and-initial-structure-to-relaxed-energy-is2re-tasks"><span class="xref myst">Initial Structure to Relaxed Structure (IS2RS) / Relaxed Energy (IS2RE)</span></a></p></li>
+<li><p><a class="reference internal" href="#relaxation-trajectories"><span class="xref myst">Relaxation Trajectories</span></a></p></li>
+<li><p><a class="reference internal" href="#bader-charge-data"><span class="xref myst">Bader charge data</span></a></p></li>
+<li><p><a class="reference internal" href="#oc20-mappings"><span class="xref myst">OC20 metadata</span></a></p></li>
+<li><p><a class="reference internal" href="#dataset-changelog"><span class="xref myst">Changelog</span></a></p></li>
+<li><p><a class="reference internal" href="#citing-oc20"><span class="xref myst">License and bibtex</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#open-catalyst-2022-oc22"><span class="xref myst">Open Catalyst 2022 (OC22)</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#structure-to-total-energy-and-forces-s2ef-total-task"><span class="xref myst">Structure to Total Energy and Forces (S2EF-total)</span></a></p></li>
+<li><p><a class="reference internal" href="#initial-structure-to-relaxed-structure-is2rs-and-initial-structure-to-relaxed-total-energy-is2re-total-tasks"><span class="xref myst">Initial Structure to Relaxed Structure (IS2RS) / Relaxed Total Energy (IS2RE-total)</span></a></p></li>
+<li><p><a class="reference internal" href="#relaxation-trajectories-1"><span class="xref myst">Relaxation Trajectories</span></a></p></li>
+<li><p><a class="reference internal" href="#oc22-mappings"><span class="xref myst">OC22 metadata</span></a></p></li>
+<li><p><a class="reference internal" href="#citing-oc22"><span class="xref myst">License and bibtex</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#open-direct-air-capture-2023-odac23"><span class="xref myst">Open Direct Air Capture 2023 (ODAC23)</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#structure-to-energy-and-forces-s2ef-task"><span class="xref myst">Structure to Energy and Forces (S2EF) task</span></a></p></li>
+<li><p><a class="reference internal" href="#initial-structure-to-relaxed-structure-is2rs--relaxed-energy-is2re-tasks"><span class="xref myst">Initial Structure to Relaxed Structure (IS2RS) / Relaxed Energy (IS2RE) tasks</span></a></p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<section id="open-catalyst-2020-oc20">
+<h2>Open Catalyst 2020 (OC20)<a class="headerlink" href="#open-catalyst-2020-oc20" title="Link to this heading">#</a></h2>
+<p><em>NOTE: Data files for all tasks / splits were updated on Feb 10, 2021 due to minor bugs (affecting &lt; 1% of the data) in earlier versions. If you downloaded data before Feb 10, 2021, please re-download the data.</em></p>
+<section id="download-and-preprocess-the-dataset">
+<h3>Download and preprocess the dataset<a class="headerlink" href="#download-and-preprocess-the-dataset" title="Link to this heading">#</a></h3>
+<p>IS2* datasets are stored as LMDB files and are ready to be used upon download.
+S2EF train+val datasets require an additional preprocessing step.</p>
+<p>For convenience, a self-contained script can be found <a class="reference external" href="https://github.com/Open-Catalyst-Project/ocp/blob/main/scripts/download_data.py">here</a> to download, preprocess, and organize the data directories to be readily usable by the existing <a class="reference external" href="https://github.com/Open-Catalyst-Project/ocp/tree/main/configs">configs</a>.</p>
+<p>For IS2*, run the script as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">scripts</span><span class="o">/</span><span class="n">download_data</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">task</span> <span class="n">is2re</span>
+</pre></div>
+</div>
+<p>For S2EF train/val, run the script as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">scripts</span><span class="o">/</span><span class="n">download_data</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">task</span> <span class="n">s2ef</span> <span class="o">--</span><span class="n">split</span> <span class="n">SPLIT_SIZE</span> <span class="o">--</span><span class="n">get</span><span class="o">-</span><span class="n">edges</span> <span class="o">--</span><span class="n">num</span><span class="o">-</span><span class="n">workers</span> <span class="n">WORKERS</span> <span class="o">--</span><span class="n">ref</span><span class="o">-</span><span class="n">energy</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--split</span></code>: split size to download: <code class="docutils literal notranslate"><span class="pre">&quot;200k&quot;,</span> <span class="pre">&quot;2M&quot;,</span> <span class="pre">&quot;20M&quot;,</span> <span class="pre">&quot;all&quot;,</span> <span class="pre">&quot;val_id&quot;,</span> <span class="pre">&quot;val_ood_ads&quot;,</span> <span class="pre">&quot;val_ood_cat&quot;,</span> <span class="pre">or</span> <span class="pre">&quot;val_ood_both&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--get-edges</span></code>: includes edge information in LMDBs (~10x storage requirement, ~3-5x slowdown), otherwise, compute edges on the fly (larger GPU memory requirement).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--num-workers</span></code>: number of workers to parallelize preprocessing across.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--ref-energy</span></code>: uses referenced energies instead of raw energies.</p></li>
+</ul>
+<p>For S2EF test, run the script as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">scripts</span><span class="o">/</span><span class="n">download_data</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">task</span> <span class="n">s2ef</span> <span class="o">--</span><span class="n">split</span> <span class="n">test</span>
+</pre></div>
+</div>
+<p>To download and process the dataset in a directory other than your local <code class="docutils literal notranslate"><span class="pre">ocp/data</span></code> folder, add the following command line argument <code class="docutils literal notranslate"><span class="pre">--data-path</span></code>.</p>
+<p>Note that the baseline <a class="reference external" href="https://github.com/Open-Catalyst-Project/ocp/tree/main/configs">configs</a>
+expect the data to be found in <code class="docutils literal notranslate"><span class="pre">ocp/data</span></code>, make sure you symlink your directory or
+modify the paths in the configs accordingly.</p>
+<p>The following sections list dataset download links and sizes for various S2EF
+and IS2RE/IS2RS task splits. If you used the above <code class="docutils literal notranslate"><span class="pre">download_data.py</span></code> script to
+download and preprocess the data, you are good to go and can stop reading here!</p>
+</section>
+<section id="structure-to-energy-and-forces-s2ef-task">
+<h3>Structure to Energy and Forces (S2EF) task<a class="headerlink" href="#structure-to-energy-and-forces-s2ef-task" title="Link to this heading">#</a></h3>
+<p>For this task’s train and validation sets, we provide compressed trajectory files with the input structures and output energies and forces.  We provide precomputed LMDBs for the test sets. To use the train and validation datasets, first download the files and uncompress them. The uncompressed files are used to generate LMDBs, which are in turn used by the dataloaders to train the ML models. Code for the dataloaders and generating the LMDBs may be found in the Github repository.</p>
+<p>Four training datasets are provided with different sizes. Each is a subset of the other, i.e., the 2M dataset is contained in the 20M and all datasets.</p>
+<p>Four datasets are provided for validation set. Each dataset corresponds to a subsplit used to evaluate different types of extrapolation, in domain (id, same distribution as the training dataset), out of domain adsorbate (ood_ads, unseen adsorbate), out of domain catalyst (ood_cat, unseen catalyst composition), and out of domain both (ood_both, unseen adsorbate and catalyst composition).</p>
+<p>For the test sets, we provide precomputed LMDBs for each of the 4 subsplits (In Domain, OOD Adsorbate, OOD Catalyst, OOD Both).</p>
+<p>Each tarball has a README file containing details about file formats, number of structures / trajectories, etc.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Splits</p></th>
+<th class="head"><p>Size of compressed version (in bytes)</p></th>
+<th class="head"><p>Size of uncompressed version (in bytes)</p></th>
+<th class="head"><p>MD5 checksum (download link)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Train</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>all</p></td>
+<td><p>225G</p></td>
+<td><p>1.1T</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/opencatalystproject/data/s2ef_train_all.tar">12a7087bfd189a06ccbec9bc7add2bcd</a></p></td>
+</tr>
+<tr class="row-even"><td><p>20M</p></td>
+<td><p>34G</p></td>
+<td><p>165G</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/opencatalystproject/data/s2ef_train_20M.tar">863bc983245ffc0285305a1850e19cf7</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>2M</p></td>
+<td><p>3.4G</p></td>
+<td><p>17G</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/opencatalystproject/data/s2ef_train_2M.tar">953474cb93f0b08cdc523399f03f7c36</a></p></td>
+</tr>
+<tr class="row-even"><td><p>200K</p></td>
+<td><p>344M</p></td>
+<td><p>1.7G</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/opencatalystproject/data/s2ef_train_200K.tar">f8d0909c2623a393148435dede7d3a46</a></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Validation</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>val_id</p></td>
+<td><p>1.7G</p></td>
+<td><p>8.3G</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/opencatalystproject/data/s2ef_val_id.tar">f57f7f5c1302637940f2cc858e789410</a></p></td>
+</tr>
+<tr class="row-even"><td><p>val_ood_ads</p></td>
+<td><p>1.7G</p></td>
+<td><p>8.2G</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/opencatalystproject/data/s2ef_val_ood_ads.tar">431ab0d7557a4639605ba8b67793f053</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>val_ood_cat</p></td>
+<td><p>1.7G</p></td>
+<td><p>8.3G</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/opencatalystproject/data/s2ef_val_ood_cat.tar">532d6cd1fe541a0ddb0aa0f99962b7db</a></p></td>
+</tr>
+<tr class="row-even"><td><p>val_ood_both</p></td>
+<td><p>1.9G</p></td>
+<td><p>9.5G</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/opencatalystproject/data/s2ef_val_ood_both.tar">5731862978d80502bbf7017d68c2c729</a></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Test (LMDBs for all splits)</p></td>
+<td><p>30G</p></td>
+<td><p>415G</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/opencatalystproject/data/s2ef_test_lmdbs.tar.gz">bcada432482f6e87b24e14b6b744992a</a></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Rattled data</p></td>
+<td><p>29G</p></td>
+<td><p>136G</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/opencatalystproject/data/s2ef_rattled.tar">40431149b27b64ce1fb40cac4e2e064b</a></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>MD data</p></td>
+<td><p>42G</p></td>
+<td><p>306G</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/opencatalystproject/data/s2ef_md.tar">9fed845aaab8fb4bf85e3a8db57796e0</a></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="initial-structure-to-relaxed-structure-is2rs-and-initial-structure-to-relaxed-energy-is2re-tasks">
+<h3>Initial Structure to Relaxed Structure (IS2RS) and Initial Structure to Relaxed Energy (IS2RE) tasks<a class="headerlink" href="#initial-structure-to-relaxed-structure-is2rs-and-initial-structure-to-relaxed-energy-is2re-tasks" title="Link to this heading">#</a></h3>
+<p>For the IS2RS and IS2RE tasks, we are providing:</p>
+<ul class="simple">
+<li><p>One <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code> file with precomputed LMDBs which once downloaded and uncompressed, can be used directly to train ML models. The LMDBs contain the input initial structures and the output relaxed structures and energies. Training datasets are split by size, with each being a subset of the larger splits, similar to S2EF. The validation and test datasets are broken into subsplits based on different extrapolation evaluations (In Domain, OOD Adsorbate, OOD Catalyst, OOD Both).</p></li>
+<li><p>underlying ASE relaxation trajectories for the adsorbate+catalyst in the entire training and validation sets for the IS2RE and IS2RS tasks. These are <strong>not</strong> required to download for training ML models, but are available for interested users.</p></li>
+</ul>
+<p>Each tarball has README file containing details about file formats, number of structures / trajectories, etc.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Splits</p></th>
+<th class="head"><p>Size of compressed version (in bytes)</p></th>
+<th class="head"><p>Size of uncompressed version (in bytes)</p></th>
+<th class="head"><p>MD5 checksum (download link)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Train (all splits) + Validation (all splits) + test (all splits)</p></td>
+<td><p>8.1G</p></td>
+<td><p>97G</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/opencatalystproject/data/is2res_train_val_test_lmdbs.tar.gz">cfc04dd2f87b4102ab2f607240d25fb1</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Test-challenge 2021 (<a class="reference external" href="https://opencatalystproject.org/challenge.html">challenge details</a>)</p></td>
+<td><p>1.3G</p></td>
+<td><p>17G</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/opencatalystproject/data/is2re_test_challenge_2021.tar.gz">aed414cdd240fbb5670b5de6887a138b</a></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="relaxation-trajectories">
+<h3>Relaxation Trajectories<a class="headerlink" href="#relaxation-trajectories" title="Link to this heading">#</a></h3>
+<section id="adsorbate-catalyst-system-trajectories-optional-download">
+<h4>Adsorbate+catalyst system trajectories (optional download)<a class="headerlink" href="#adsorbate-catalyst-system-trajectories-optional-download" title="Link to this heading">#</a></h4>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Split</p></th>
+<th class="head"><p>Size of compressed version (in bytes)</p></th>
+<th class="head"><p>Size of uncompressed version (in bytes)</p></th>
+<th class="head"><p>MD5 checksum (download link)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>All IS2RE/S training (~466k trajectories)</p></td>
+<td><p>109G</p></td>
+<td><p>841G</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/opencatalystproject/data/is2res_train_trajectories.tar">9e3ed4d1e497bfdce4472ee70455edef</a></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>IS2RE/S Validation</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>val_id (~25K trajectories)</p></td>
+<td><p>5.9G</p></td>
+<td><p>46G</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/opencatalystproject/data/is2res_val_id_trajectories.tar">fcb71363018fb1e7127db2500e39e11a</a></p></td>
+</tr>
+<tr class="row-even"><td><p>val_ood_ads (~25K trajectories)</p></td>
+<td><p>5.7G</p></td>
+<td><p>44G</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/opencatalystproject/data/is2res_val_ood_ads_trajectories.tar">5ced8ea84584aa229d31e693e0fb090f</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>val_ood_cat (~25K trajectories)</p></td>
+<td><p>6.0G</p></td>
+<td><p>46G</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/opencatalystproject/data/is2res_val_ood_cat_trajectories.tar">88dcc02fd8c174a72d2c416878fc44ff</a></p></td>
+</tr>
+<tr class="row-even"><td><p>val_ood_both (~25K trajectories)</p></td>
+<td><p>4.4G</p></td>
+<td><p>35G</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/opencatalystproject/data/is2res_val_ood_both_trajectories.tar">bc74b6474a13542cc56eaa97bd51adfc</a></p></td>
+</tr>
+</tbody>
+</table>
+<section id="per-adsorbate-trajectories-optional-download">
+<h5>Per-adsorbate trajectories (optional download)<a class="headerlink" href="#per-adsorbate-trajectories-optional-download" title="Link to this heading">#</a></h5>
+<p>Adsorbate+catalyst trajectories on a per adsorbate basis are provided <a class="reference internal" href="DATASET_PER_ADSORBATE.html"><span class="std std-doc">here</span></a> to avoid having to download all systems. Note - a few adsorbates are intentionally left out for the test splits.</p>
+</section>
+</section>
+<section id="catalyst-system-trajectories-optional-download">
+<h4>Catalyst system trajectories (optional download)<a class="headerlink" href="#catalyst-system-trajectories-optional-download" title="Link to this heading">#</a></h4>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Number</p></th>
+<th class="head"><p>Size of compressed version (in bytes)</p></th>
+<th class="head"><p>Size of uncompressed version (in bytes)</p></th>
+<th class="head"><p>MD5 checksum (download link)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>294k systems</p></td>
+<td><p>20G</p></td>
+<td><p>151G</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/opencatalystproject/data/slab_trajectories.tar">347f4183465810e9b384e7a033baefc7</a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="bader-charge-data">
+<h3>Bader charge data<a class="headerlink" href="#bader-charge-data" title="Link to this heading">#</a></h3>
+<p>We provide Bader charge data for all final frames of our train + validation systems in OC20 (for both S2EF and IS2RE/RS tasks). A <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code> file, when downloaded and uncompressed will contain several directories with unique system-ids (of the format <code class="docutils literal notranslate"><span class="pre">random&lt;XYZ&gt;</span></code> where <code class="docutils literal notranslate"><span class="pre">XYZ</span></code> is an integer). Each directory will contain raw Bader charge analysis outputs. For more details on the Bader charge analysis, see https://theory.cm.utexas.edu/henkelman/research/bader/.</p>
+<p>Downloadable link: https://dl.fbaipublicfiles.com/opencatalystproject/data/oc20_bader_data.tar (MD5 checksum: <code class="docutils literal notranslate"><span class="pre">aecc5e23542de49beceb4b7e44c153b9</span></code>)</p>
+</section>
+<section id="oc20-mappings">
+<h3>OC20 mappings<a class="headerlink" href="#oc20-mappings" title="Link to this heading">#</a></h3>
+<section id="data-mapping-information">
+<h4>Data mapping information<a class="headerlink" href="#data-mapping-information" title="Link to this heading">#</a></h4>
+<p>We provide a Python pickle file containing information about the slab and adsorbates for each of the systems in OC20 dataset. Loading the pickle file will load a Python dictionary. The keys of this dictionary are the adsorbate+catalyst system-ids (of the format <code class="docutils literal notranslate"><span class="pre">random&lt;XYZ&gt;</span></code>  where <code class="docutils literal notranslate"><span class="pre">XYZ</span></code> is an integer), and the corresponding value of each key is a dictionary with information about:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bulk_mpid</span></code> : Materials Project ID of the bulk system used corresponding the the catalyst surface</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bulk_symbols</span></code>  Chemical composition of the bulk counterpart</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ads_symbols</span></code>  Chemical composition of the adsorbate counterpart</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ads_id</span></code> : internal unique identifier, one for each of the 82 adsorbates used in the dataset</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bulk_id</span></code> : internal unique identifier one for each of the 11500 bulks used in the dataset</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">miller_index</span></code>: 3-tuple of integers indicating the Miller indices of the surface</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shift</span></code>: c-direction shift used to determine cutoff for the surface (c-direction is following the nomenclature from Pymatgen)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">top</span></code>: boolean indicating whether the chosen surface was at the top or bottom of the originally enumerated surface</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adsorption_site</span></code>: A tuple of 3-tuples containing the Cartesian coordinates of each binding adsorbate atom</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">class</span></code>: integer indicating the class of materials the system’s slab is part of, where:</p></li>
+<li><p>0 - intermetallics</p></li>
+<li><p>1 - metalloids</p></li>
+<li><p>2 - non-metals</p></li>
+<li><p>3 - halides</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">anomaly</span></code>: integer indicating possible anomalies (based off general heuristics, not to be taken as perfect classifications), where:</p></li>
+<li><p>0 - no anomaly</p></li>
+<li><p>1 - adsorbate dissociation</p></li>
+<li><p>2 - adsorbate desorption</p></li>
+<li><p>3 - surface reconstruction</p></li>
+<li><p>4 - incorrect CHCOH placement, appears to be CHCO with a lone, uninteracting, H far off in the unit cell</p></li>
+</ul>
+<p>Downloadable link: https://dl.fbaipublicfiles.com/opencatalystproject/data/oc20_data_mapping.pkl (MD5 checksum: <code class="docutils literal notranslate"><span class="pre">01c879067a05b4288055a1fdf821e068</span></code>)</p>
+<p>An example entry is</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;random2181546&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;bulk_id&#39;</span><span class="p">:</span> <span class="mi">6510</span><span class="p">,</span>
+  <span class="s1">&#39;ads_id&#39;</span><span class="p">:</span> <span class="mi">69</span><span class="p">,</span>
+  <span class="s1">&#39;bulk_mpid&#39;</span><span class="p">:</span> <span class="s1">&#39;mp-22179&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;bulk_symbols&#39;</span><span class="p">:</span> <span class="s1">&#39;Si2Ti2Y2&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;ads_symbols&#39;</span><span class="p">:</span> <span class="s1">&#39;*N2&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;miller_index&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+  <span class="s1">&#39;shift&#39;</span><span class="p">:</span> <span class="mf">0.145</span><span class="p">,</span>
+  <span class="s1">&#39;top&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+  <span class="s1">&#39;adsorption_site&#39;</span><span class="p">:</span> <span class="p">((</span><span class="mf">4.5</span><span class="p">,</span> <span class="mf">12.85</span><span class="p">,</span> <span class="mf">16.13</span><span class="p">),),</span>
+  <span class="s1">&#39;class&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="s1">&#39;anomaly&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="adsorbate-catalyst-system-to-catalyst-system-mapping-information">
+<h3>Adsorbate-catalyst system to catalyst system mapping information<a class="headerlink" href="#adsorbate-catalyst-system-to-catalyst-system-mapping-information" title="Link to this heading">#</a></h3>
+<p>We provide a Python pickle file containing information about the mapping from adsorbate-catalyst systems to their corresponding catalyst systems. Loading the pickle file will load a Python dictionary. The keys of this dictionary are the adsorbate+catalyst system-ids (of the format <code class="docutils literal notranslate"><span class="pre">random&lt;XYZ&gt;</span></code>  where <code class="docutils literal notranslate"><span class="pre">XYZ</span></code> is an integer), and values will be the catalyst system-ids (of the format <code class="docutils literal notranslate"><span class="pre">random&lt;PQR&gt;</span></code> where <code class="docutils literal notranslate"><span class="pre">PQR</span></code> is an integer).</p>
+<p>Downloadable link: https://dl.fbaipublicfiles.com/opencatalystproject/data/mapping_adslab_slab.pkl (MD5 checksum: <code class="docutils literal notranslate"><span class="pre">079041076c3f15d18ecb5d17c509cdfe</span></code>)</p>
+<p>An example entry is</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;random1981709&#39;</span><span class="p">:</span> <span class="s1">&#39;random533137&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="dataset-changelog">
+<h3>Dataset changelog<a class="headerlink" href="#dataset-changelog" title="Link to this heading">#</a></h3>
+<section id="september-2021">
+<h4>September 2021<a class="headerlink" href="#september-2021" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Released IS2RE <code class="docutils literal notranslate"><span class="pre">test-challenge</span></code> data for the <a class="reference external" href="https://opencatalystproject.org/challenge.html">Open Catalyst Challenge 2021</a></p></li>
+</ul>
+</section>
+<section id="march-2021">
+<h4>March 2021<a class="headerlink" href="#march-2021" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Modified the pickle corresponding to data mapping information. Now the pickle includes extra information about <code class="docutils literal notranslate"><span class="pre">miller_index</span></code>, <code class="docutils literal notranslate"><span class="pre">shift</span></code>, <code class="docutils literal notranslate"><span class="pre">top</span></code> and <code class="docutils literal notranslate"><span class="pre">adsorption_site</span></code>.</p></li>
+<li><p>Added Molecular Dynamics (MD) and rattled data for S2EF task.</p></li>
+</ul>
+</section>
+<section id="version-2-feb-2021">
+<h4>Version 2, Feb 2021<a class="headerlink" href="#version-2-feb-2021" title="Link to this heading">#</a></h4>
+<p>Modifications:</p>
+<ul class="simple">
+<li><p>Removed slab systems which had single frame checkpoints, this led to modifications of reference frame energies of 350k frames out of 130M.</p></li>
+<li><p>Fixed stitching of checkpoints in adsorbate+catalyst trajectories.</p></li>
+<li><p>Added release of slab trajectories.</p></li>
+</ul>
+<p>Below are actual updates numbers, of the form <code class="docutils literal notranslate"><span class="pre">old</span></code> → <code class="docutils literal notranslate"><span class="pre">new</span></code></p>
+<p>Total S2EF frames:</p>
+<ul class="simple">
+<li><p>train: 133953162 → 133934018</p></li>
+<li><p>validation:</p>
+<ul>
+<li><p>val_id : 1000000 → 999866</p></li>
+<li><p>val_ood_ads: 1000000 → 999838</p></li>
+<li><p>val_ood_cat: 1000000 → 999809</p></li>
+<li><p>val_ood_both: 1000000 →  999944</p></li>
+</ul>
+</li>
+<li><p>test:</p>
+<ul>
+<li><p>test_id: 1000000 → 999736</p></li>
+<li><p>test_ood_ads: 1000000 → 999859</p></li>
+<li><p>test_ood_cat: 1000000 → 999826</p></li>
+<li><p>test_ood_both: 1000000 → 999973</p></li>
+</ul>
+</li>
+</ul>
+<p>Total IS2RE and IS2RS systems:</p>
+<ul class="simple">
+<li><p>train: 461313 → 460328</p></li>
+<li><p>validation:</p>
+<ul>
+<li><p>val_id : 24946 → 24943</p></li>
+<li><p>val_ood_ads: 24966 → 24961</p></li>
+<li><p>val_ood_cat: 24988 → 24963</p></li>
+<li><p>val_ood_both: 24963 → 24987</p></li>
+</ul>
+</li>
+<li><p>test:</p>
+<ul>
+<li><p>test_id: 24951 → 24948</p></li>
+<li><p>test_ood_ads: 24931 → 24930</p></li>
+<li><p>test_ood_cat: 24967 → 24965</p></li>
+<li><p>test_ood_both: 24986 → 24985</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="version-1-oct-2020">
+<h4>Version 1, Oct 2020<a class="headerlink" href="#version-1-oct-2020" title="Link to this heading">#</a></h4>
+<p>Total S2EF frames:</p>
+<ul class="simple">
+<li><p>train: 133953162</p></li>
+<li><p>validation:</p>
+<ul>
+<li><p>val_id : 1000000</p></li>
+<li><p>val_ood_ads: 1000000</p></li>
+<li><p>val_ood_cat: 1000000</p></li>
+<li><p>val_ood_both: 1000000</p></li>
+</ul>
+</li>
+<li><p>test:</p>
+<ul>
+<li><p>test_id: 1000000</p></li>
+<li><p>test_ood_ads: 1000000</p></li>
+<li><p>test_ood_cat: 1000000</p></li>
+<li><p>test_ood_both: 1000000</p></li>
+</ul>
+</li>
+</ul>
+<p>Total IS2RE and IS2RS systems:</p>
+<ul class="simple">
+<li><p>train: 461313</p></li>
+<li><p>validation:</p>
+<ul>
+<li><p>val_id : 24936</p></li>
+<li><p>val_ood_ads: 24966</p></li>
+<li><p>val_ood_cat: 24988</p></li>
+<li><p>val_ood_both: 24963</p></li>
+</ul>
+</li>
+<li><p>test:</p>
+<ul>
+<li><p>test_id: 24951</p></li>
+<li><p>test_ood_ads: 24931</p></li>
+<li><p>test_ood_cat: 24967</p></li>
+<li><p>test_ood_both: 24986</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="citing-oc20">
+<h3>Citing OC20<a class="headerlink" href="#citing-oc20" title="Link to this heading">#</a></h3>
+<p>The Open Catalyst 2020 (OC20) dataset is licensed under a <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 License</a>.</p>
+<p>Please consider citing the following paper in any research manuscript using the OC20 dataset:</p>
+<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@article</span><span class="p">{</span><span class="nl">ocp_dataset</span><span class="p">,</span>
+<span class="w">    </span><span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Chanussot*, Lowik and Das*, Abhishek and Goyal*, Siddharth and Lavril*, Thibaut and Shuaibi*, Muhammed and Riviere, Morgane and Tran, Kevin and Heras-Domingo, Javier and Ho, Caleb and Hu, Weihua and Palizhati, Aini and Sriram, Anuroop and Wood, Brandon and Yoon, Junwoong and Parikh, Devi and Zitnick, C. Lawrence and Ulissi, Zachary}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Open Catalyst 2020 (OC20) Dataset and Community Challenges}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">journal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{ACS Catalysis}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">year</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2021}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">doi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{10.1021/acscatal.0c04525}</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="open-catalyst-2022-oc22">
+<h2>Open Catalyst 2022 (OC22)<a class="headerlink" href="#open-catalyst-2022-oc22" title="Link to this heading">#</a></h2>
+<section id="structure-to-total-energy-and-forces-s2ef-total-task">
+<h3>Structure to Total Energy and Forces (S2EF-Total) task<a class="headerlink" href="#structure-to-total-energy-and-forces-s2ef-total-task" title="Link to this heading">#</a></h3>
+<p>For this task’s train, validation and test sets, we provide precomputed LMDBs that can be directly used with dataloaders provided in our code. The LMDBs contain input structures from all points in relaxation trajectories along with the energy of the structure and the atomic forces. The validation and test datasets are broken into subsplits based on in-distribution and out-of-distribution materials relative to the training dataset. All LMDBs are compressed into a single <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code> file.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Splits</p></th>
+<th class="head"><p>Size of compressed version (in bytes)</p></th>
+<th class="head"><p>Size of uncompressed version (in bytes)</p></th>
+<th class="head"><p>MD5 checksum (download link)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Train (all splits) + Validation (all splits) + test (all splits)</p></td>
+<td><p>20G</p></td>
+<td><p>71G</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/opencatalystproject/data/oc22/s2ef_total_train_val_test_lmdbs.tar.gz">ebea523c6f8d61248a37b4dd660b11e6</a></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="initial-structure-to-relaxed-structure-is2rs-and-initial-structure-to-relaxed-total-energy-is2re-total-tasks">
+<h3>Initial Structure to Relaxed Structure (IS2RS) and Initial Structure to Relaxed Total Energy (IS2RE-Total) tasks<a class="headerlink" href="#initial-structure-to-relaxed-structure-is2rs-and-initial-structure-to-relaxed-total-energy-is2re-total-tasks" title="Link to this heading">#</a></h3>
+<p>For IS2RE-Total / IS2RS training, validation and test sets, we provide precomputed LMDBs that can be directly used with dataloaders provided in our code. The LMDBs contain input initial structures and the output relaxed structures and energies. The validation and test datasets are broken into subsplits based on in-distribution and out-of-distribution materials relative to the training dataset. All LMDBs are compressed into a single <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code> file.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Splits</p></th>
+<th class="head"><p>Size of compressed version (in bytes)</p></th>
+<th class="head"><p>Size of uncompressed version (in bytes)</p></th>
+<th class="head"><p>MD5 checksum (download link)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Train (all splits) + Validation (all splits) + test (all splits)</p></td>
+<td><p>109M</p></td>
+<td><p>424M</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/opencatalystproject/data/oc22/is2res_total_train_val_test_lmdbs.tar.gz">b35dc24e99ef3aeaee6c5c949903de94</a></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id1">
+<h3>Relaxation Trajectories<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<section id="system-trajectories-optional-download">
+<h4>System trajectories (optional download)<a class="headerlink" href="#system-trajectories-optional-download" title="Link to this heading">#</a></h4>
+<p>We provide relaxation trajectories for all systems used in train and validation sets of S2EF-Total and IS2RE-Total/RS task:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Number</p></th>
+<th class="head"><p>Size of compressed version (in bytes)</p></th>
+<th class="head"><p>Size of uncompressed version (in bytes)</p></th>
+<th class="head"><p>MD5 checksum (download link)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>S2EF and IS2RE (both train and validation)</p></td>
+<td><p>34G</p></td>
+<td><p>80G</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/opencatalystproject/data/oc22/oc22_trajectories.tar.gz">977b6be1cbac6864e63c4c7fbf8a3fce</a></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="oc22-mappings">
+<h3>OC22 Mappings<a class="headerlink" href="#oc22-mappings" title="Link to this heading">#</a></h3>
+<section id="id2">
+<h4>Data mapping information<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<p>We provide a Python pickle file containing information about the slab and adsorbates for each of the systems in OC22 dataset. Loading the pickle file will load a Python dictionary. The keys of this dictionary are the system-ids (of the format <code class="docutils literal notranslate"><span class="pre">XYZ</span></code>  where <code class="docutils literal notranslate"><span class="pre">XYZ</span></code> is an integer, corresponding to the <code class="docutils literal notranslate"><span class="pre">sid</span></code> in the LMDB Data object), and the corresponding value of each key is a dictionary with information about:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bulk_id</span></code>: Materials Project ID of the bulk system used corresponding the the catalyst surface</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bulk_symbols</span></code>: Chemical composition of the bulk counterpart</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">miller_index</span></code>: 3-tuple of integers indicating the Miller indices of the surface</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">traj_id</span></code>: Identifier associated with the accompanying raw trajectory (if available)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">slab_sid</span></code>: Identifier associated with the corresponding slab (if available)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ads_symbols</span></code>: Chemical composition of the adsorbate counterpart (adosrbate+slabs only)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nads</span></code>: Number of adsorbates present</p></li>
+</ul>
+<p>Downloadable link:  https://dl.fbaipublicfiles.com/opencatalystproject/data/oc22/oc22_metadata.pkl (MD5 checksum: <code class="docutils literal notranslate"><span class="pre">13dc06c6510346d8a7f614d5b26c8ffa</span></code> )</p>
+<p>An example adsorbate+slab entry:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="mi">6877</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;bulk_id&#39;</span><span class="p">:</span> <span class="s1">&#39;mp-559112&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;miller_index&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+  <span class="s1">&#39;nads&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="s1">&#39;traj_id&#39;</span><span class="p">:</span> <span class="s1">&#39;K2Zn6O7_mp-559112_RyQXa0N0uc_ohyUKozY3G&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;bulk_symbols&#39;</span><span class="p">:</span> <span class="s1">&#39;K4Zn12O14&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;slab_sid&#39;</span><span class="p">:</span> <span class="mi">30859</span><span class="p">,</span>
+  <span class="s1">&#39;ads_symbols&#39;</span><span class="p">:</span> <span class="s1">&#39;O2&#39;</span><span class="p">},</span>
+</pre></div>
+</div>
+<p>An example slab entry:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="mi">34815</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;bulk_id&#39;</span><span class="p">:</span> <span class="s1">&#39;mp-18793&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;miller_index&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+  <span class="s1">&#39;nads&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s1">&#39;traj_id&#39;</span><span class="p">:</span> <span class="s1">&#39;LiCrO2_mp-18793_clean_3HDHBg6TIz&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;bulk_symbols&#39;</span><span class="p">:</span> <span class="s1">&#39;Li2Cr2O4&#39;</span><span class="p">},</span>
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h4><a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
+</section>
+<section id="oc20-reference-information">
+<h4>OC20 reference information<a class="headerlink" href="#oc20-reference-information" title="Link to this heading">#</a></h4>
+<p>In order to train models on OC20 total energy, we provide a Python pickle file containing the energy necessary to convert adsorption energy values to total energy. Loading the pickle file will load a Python dictionary. The keys of this dictionary are the system-ids (of the format <code class="docutils literal notranslate"><span class="pre">random&lt;XYZ&gt;</span></code>  where <code class="docutils literal notranslate"><span class="pre">XYZ</span></code> is an integer, corresponding to the <code class="docutils literal notranslate"><span class="pre">sid</span></code> in the LMDB Data object), and the corresponding value of each key is the energy to be added to OC20 energy values. To train on total energies for OC20, specify the path to this pickle file in your training configs.</p>
+<p>Downloadable link:  https://dl.fbaipublicfiles.com/opencatalystproject/data/oc22/oc20_ref.pkl (MD5 checksum: <code class="docutils literal notranslate"><span class="pre">043e1e0b0cce64c62f01a8563dbc3178</span></code>)</p>
+</section>
+<section id="id4">
+<h4><a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
+</section>
+</section>
+<section id="citing-oc22">
+<h3>Citing OC22<a class="headerlink" href="#citing-oc22" title="Link to this heading">#</a></h3>
+<p>The Open Catalyst 2022 (OC22) dataset is licensed under a <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 License</a>.</p>
+<p>Please consider citing the following paper in any research manuscript using the OC22 dataset:</p>
+<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@article</span><span class="p">{</span><span class="nl">oc22_dataset</span><span class="p">,</span>
+<span class="w">    </span><span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Tran*, Richard and Lan*, Janice and Shuaibi*, Muhammed and Wood*, Brandon and Goyal*, Siddharth and Das, Abhishek and Heras-Domingo, Javier and Kolluru, Adeesh and Rizvi, Ammar and Shoghi, Nima and Sriram, Anuroop and Ulissi, Zachary and Zitnick, C. Lawrence}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{The Open Catalyst 2022 (OC22) dataset and challenges for oxide electrocatalysts}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">journal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{ACS Catalysis}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">year</span><span class="p">=</span><span class="s">{2023}</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="open-direct-air-capture-2023-odac23">
+<h2>Open Direct Air Capture 2023 (ODAC23)<a class="headerlink" href="#open-direct-air-capture-2023-odac23" title="Link to this heading">#</a></h2>
+<section id="id5">
+<h3>Structure to Energy and Forces (S2EF) task<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>We provide precomputed LMDBs for train, validation, and the various test sets that can be used directly with the dataloaders provided in our code. The LMDBs contain input structures from all points in relaxation trajectories along with the energy of the structure and the atomic forces. The dataset contains an in-domain test set and 4 out-of-domain test sets (ood-large, ood-linker, ood-topology, and ood-linker &amp; topology). All LMDbs  are compressed into a single <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code> file.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Splits</p></th>
+<th class="head"><p>Size of compressed version (in bytes)</p></th>
+<th class="head"><p>Size of uncompressed version (in bytes)</p></th>
+<th class="head"><p>MD5 checksum (download link)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Train + Validation + Test (all splits)</p></td>
+<td><p>172G</p></td>
+<td><p>476G</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/large_objects/dac/datasets/odac23_s2ef.tar.gz">162f0660b2f1c9209c5b57f7b9e545a7</a></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>The train and val splits are also available in <code class="docutils literal notranslate"><span class="pre">extxyz</span></code> formats. Each trajectory is in stored in a different <code class="docutils literal notranslate"><span class="pre">extxyz</span></code> file.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Splits</p></th>
+<th class="head"><p>Size of compressed version (in bytes)</p></th>
+<th class="head"><p>Size of uncompressed version (in bytes)</p></th>
+<th class="head"><p>MD5 checksum (download link)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Train</p></td>
+<td><p>232G</p></td>
+<td><p>781G</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/large_objects/dac/datasets/extxyz_train.tar.gz">381e72fd8b9c055065fd3afff6b0945b</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Val</p></td>
+<td><p>5.1G</p></td>
+<td><p>18G</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/dac/datasets/extxyz_val.tar.gz">09913759c6e0f8d649f7ec9dff9e0e8b</a></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="initial-structure-to-relaxed-structure-is2rs-relaxed-energy-is2re-tasks">
+<h3>Initial Structure to Relaxed Structure (IS2RS) / Relaxed Energy (IS2RE) tasks<a class="headerlink" href="#initial-structure-to-relaxed-structure-is2rs-relaxed-energy-is2re-tasks" title="Link to this heading">#</a></h3>
+<p>For IS2RE / IS2RS training, validation and test sets, we provide precomputed LMDBs that can be directly used with dataloaders provided in our code. The LMDBs contain input initial structures and the output relaxed structures and energies. The dataset contains an in-domain test set and 4 out-of-domain test sets (ood-large, ood-linker, ood-topology, and ood-linker &amp; topology). All LMDBs are compressed into a single <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code> file.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Splits</p></th>
+<th class="head"><p>Size of compressed version (in bytes)</p></th>
+<th class="head"><p>Size of uncompressed version (in bytes)</p></th>
+<th class="head"><p>MD5 checksum (download link)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Train + Validation + Test (all splits)</p></td>
+<td><p>809M</p></td>
+<td><p>2.2G</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/dac/datasets/odac23_is2r.tar.gz">f7f2f58669a30abae8cb9ba1b7f2bcd2</a></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ddec-charges">
+<h3>DDEC Charges<a class="headerlink" href="#ddec-charges" title="Link to this heading">#</a></h3>
+<p>We provide DDEC charges computed for all MOFs in the ODAC23 dataset. A small number of MOFs (~2%) are missing these charges because the DDEC calcuations failed for them.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Size of compressed version (in bytes)</p></th>
+<th class="head"><p>Size of uncompressed version (in bytes)</p></th>
+<th class="head"><p>MD5 checksum (download link)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>147M</p></td>
+<td><p>534M</p></td>
+<td><p><a class="reference external" href="https://dl.fbaipublicfiles.com/dac/datasets/ddec.tar.gz">81927b78d9e4184cc3c398e79760126a</a></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="citing-odac23">
+<h3>Citing ODAC23<a class="headerlink" href="#citing-odac23" title="Link to this heading">#</a></h3>
+<p>The OpenDAC 2023 (ODAC23) dataset is licensed under a <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 License</a>.</p>
+<p>Please consider citing the following paper in any research manuscript using the ODAC23 dataset:</p>
+<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@article</span><span class="p">{</span><span class="nl">odac23_dataset</span><span class="p">,</span>
+<span class="w">    </span><span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Anuroop Sriram and Sihoon Choi and Xiaohan Yu and Logan M. Brabson and Abhishek Das and Zachary Ulissi and Matt Uyttendaele and Andrew J. Medford and David S. Sholl}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{The Open DAC 2023 Dataset and Challenges for Sorbent Discovery in Direct Air Capture}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">year</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2023}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">journal</span><span class="p">=</span><span class="s">{arXiv preprint arXiv:2311.00341}</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./core"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="README.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">ocp</span></code> by Open Catalyst Project</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="FAQ.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Frequently Asked Questions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-catalyst-2020-oc20">Open Catalyst 2020 (OC20)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-and-preprocess-the-dataset">Download and preprocess the dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-to-energy-and-forces-s2ef-task">Structure to Energy and Forces (S2EF) task</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-structure-to-relaxed-structure-is2rs-and-initial-structure-to-relaxed-energy-is2re-tasks">Initial Structure to Relaxed Structure (IS2RS) and Initial Structure to Relaxed Energy (IS2RE) tasks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relaxation-trajectories">Relaxation Trajectories</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adsorbate-catalyst-system-trajectories-optional-download">Adsorbate+catalyst system trajectories (optional download)</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#per-adsorbate-trajectories-optional-download">Per-adsorbate trajectories (optional download)</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#catalyst-system-trajectories-optional-download">Catalyst system trajectories (optional download)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bader-charge-data">Bader charge data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#oc20-mappings">OC20 mappings</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-mapping-information">Data mapping information</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adsorbate-catalyst-system-to-catalyst-system-mapping-information">Adsorbate-catalyst system to catalyst system mapping information</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-changelog">Dataset changelog</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#september-2021">September 2021</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#march-2021">March 2021</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#version-2-feb-2021">Version 2, Feb 2021</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-oct-2020">Version 1, Oct 2020</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citing-oc20">Citing OC20</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-catalyst-2022-oc22">Open Catalyst 2022 (OC22)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-to-total-energy-and-forces-s2ef-total-task">Structure to Total Energy and Forces (S2EF-Total) task</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-structure-to-relaxed-structure-is2rs-and-initial-structure-to-relaxed-total-energy-is2re-total-tasks">Initial Structure to Relaxed Structure (IS2RS) and Initial Structure to Relaxed Total Energy (IS2RE-Total) tasks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Relaxation Trajectories</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#system-trajectories-optional-download">System trajectories (optional download)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#oc22-mappings">OC22 Mappings</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Data mapping information</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#oc20-reference-information">OC20 reference information</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citing-oc22">Citing OC22</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-direct-air-capture-2023-odac23">Open Direct Air Capture 2023 (ODAC23)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Structure to Energy and Forces (S2EF) task</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-structure-to-relaxed-structure-is2rs-relaxed-energy-is2re-tasks">Initial Structure to Relaxed Structure (IS2RS) / Relaxed Energy (IS2RE) tasks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ddec-charges">DDEC Charges</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citing-odac23">Citing ODAC23</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Open Catalyst Project
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
