@@ -140,7 +140,7 @@
 
   
 
-<a class="navbar-brand logo" href="README.html">
+<a class="navbar-brand logo" href="../index.html">
   
   
   
@@ -172,7 +172,7 @@
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="README.html">
+                <a class="reference internal" href="../index.html">
                     ocp by Open Catalyst Project
                 </a>
             </li>
@@ -212,12 +212,12 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Catalysis Tutorials</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../tutorial/intro.html">Utilizing large, graph-based, pre-trained  machine learned potentials in atomistic simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/intro.html">Intro and background on OCP and DFT</a></li>
 
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="../tutorial/OCP-introduction.html">Introduction to using OCP in molecular simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/OCP-introduction.html">Simple simulations using the OCP ASE calculator</a></li>
 
 
 
@@ -578,56 +578,9 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="training-and-evaluating-models-on-ocp-datasets">
 <h1>Training and evaluating models on OCP datasets<a class="headerlink" href="#training-and-evaluating-models-on-ocp-datasets" title="Link to this heading">#</a></h1>
-<ul class="simple">
-<li><p><a class="reference internal" href="#getting-started"><span class="xref myst">Getting Started</span></a></p></li>
-<li><p><a class="reference internal" href="#oc20"><span class="xref myst">OC20</span></a></p>
-<ul>
-<li><p><a class="reference internal" href="#initial-structure-to-relaxed-energy-prediction-is2re"><span class="xref myst">Initial Structure to Relaxed Energy (IS2RE)</span></a></p>
-<ul>
-<li><p><a class="reference internal" href="#is2re-relaxations"><span class="xref myst">IS2RE Relaxations</span></a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#structure-to-energy-and-forces-s2ef"><span class="xref myst">Structure to Energy and Forces (S2EF)</span></a></p></li>
-<li><p><a class="reference internal" href="#training-oc20-models-with-total-energies-is2res2ef"><span class="xref myst">Training OC20 models with total energies (IS2RE/S2EF)</span></a></p></li>
-<li><p><a class="reference internal" href="#overriding-yaml-config-parameters-from-the-command-line"><span class="xref myst">Overriding YAML config parameters from the command line</span></a></p></li>
-<li><p><a class="reference internal" href="#initial-structure-to-relaxed-structure-is2rs"><span class="xref myst">Initial Structure to Relaxed Structure (IS2RS)</span></a></p></li>
-<li><p><a class="reference internal" href="#create-evalai-oc20-submission-files"><span class="xref myst">Create EvalAI submission files</span></a></p>
-<ul>
-<li><p><a class="reference internal" href="#s2efis2re"><span class="xref myst">S2EF/IS2RE</span></a></p></li>
-<li><p><a class="reference internal" href="#is2rs"><span class="xref myst">IS2RS</span></a></p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#oc22"><span class="xref myst">OC22</span></a></p>
-<ul>
-<li><p><a class="reference internal" href="#initial-structure-to-total-relaxed-energy-is2re-total"><span class="xref myst">Initial Structure to Total Relaxed Energy (IS2RE-Total)</span></a></p></li>
-<li><p><a class="reference internal" href="#structure-to-total-energy-and-forces-s2ef-total"><span class="xref myst">Structure to Total Energy and Forces (S2EF-Total)</span></a></p></li>
-<li><p><a class="reference internal" href="#joint-training"><span class="xref myst">Joint Training</span></a></p></li>
-<li><p><a class="reference internal" href="#create-evalai-oc22-submission-files"><span class="xref myst">Create EvalAI submission files</span></a></p>
-<ul>
-<li><p><a class="reference internal" href="#s2ef-totalis2re-total"><span class="xref myst">S2EF-Total/IS2RE-Total</span></a></p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#using-your-own-data"><span class="xref myst">Using Your Own Data</span></a></p>
-<ul>
-<li><p><a class="reference internal" href="#writing-an-lmdb"><span class="xref myst">Writing an LMDB</span></a></p></li>
-<li><p><a class="reference internal" href="#using-an-ase-database"><span class="xref myst">Using an ASE Database</span></a></p></li>
-<li><p><a class="reference internal" href="#using-ase-readable-files"><span class="xref myst">Using ASE-Readable Files</span></a></p>
-<ul>
-<li><p><a class="reference internal" href="#single-structure-files"><span class="xref myst">Single-Structure Files</span></a></p></li>
-<li><p><a class="reference internal" href="#multi-structure-files"><span class="xref myst">Multi-Structure Files</span></a></p></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
 <section id="getting-started">
 <h2>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h2>
-<p>The <a class="reference external" href="https://opencatalystproject.org/">Open Catalyst Project</a> consists of three
-distinct tasks:</p>
+<p>The <a class="reference external" href="https://opencatalystproject.org/">Open Catalyst Project</a> consists of three distinct tasks:</p>
 <ul class="simple">
 <li><p>Initial Structure to Relaxed Energy prediction (IS2RE)</p></li>
 <li><p>Structure to Energy and Forces (S2EF)</p></li>

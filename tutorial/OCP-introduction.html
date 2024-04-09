@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Introduction to using OCP in molecular simulations &#8212; Open Catalyst Project Documentation</title>
+    <title>Simple simulations using the OCP ASE calculator &#8212; Open Catalyst Project Documentation</title>
   
   
   
@@ -62,7 +62,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Fine tuning a model" href="fine-tuning/fine-tuning-oxides.html" />
-    <link rel="prev" title="Utilizing large, graph-based, pre-trained machine learned potentials in atomistic simulations" href="intro.html" />
+    <link rel="prev" title="Intro and background on OCP and DFT" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -140,7 +140,7 @@
 
   
 
-<a class="navbar-brand logo" href="../core/README.html">
+<a class="navbar-brand logo" href="../index.html">
   
   
   
@@ -172,7 +172,7 @@
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../core/README.html">
+                <a class="reference internal" href="../index.html">
                     ocp by Open Catalyst Project
                 </a>
             </li>
@@ -212,12 +212,12 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Catalysis Tutorials</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Utilizing large, graph-based, pre-trained  machine learned potentials in atomistic simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Intro and background on OCP and DFT</a></li>
 
 
 
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction to using OCP in molecular simulations</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Simple simulations using the OCP ASE calculator</a></li>
 
 
 
@@ -514,7 +514,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Introduction to using OCP in molecular simulations</h1>
+    <h1>Simple simulations using the OCP ASE calculator</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -524,7 +524,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introduction to using OCP in molecular simulations</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Simple simulations using the OCP ASE calculator</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-adsorption-energies">Calculating adsorption energies</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
@@ -556,8 +556,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-using-ocp-in-molecular-simulations">
-<h1>Introduction to using OCP in molecular simulations<a class="headerlink" href="#introduction-to-using-ocp-in-molecular-simulations" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="simple-simulations-using-the-ocp-ase-calculator">
+<h1>Simple simulations using the OCP ASE calculator<a class="headerlink" href="#simple-simulations-using-the-ocp-ase-calculator" title="Link to this heading">#</a></h1>
 <p>To introduce OCP we start with using it to calculate adsorption energies for a simple, atomic adsorbate where we specify the site we want to the adsorption energy for. Conceptually, you do this like you would do it with density functional theory. You create a slab model for the surface, place an adsorbate on it as an initial guess, run a relaxation to get the lowest energy geometry, and then compute the adsorption energy using reference states for the adsorbate.</p>
 <p>You do have to be careful in the details though. Some OCP model/checkpoint combinations return a total energy like density functional theory would, but some return an “adsorption energy” directly. You have to know which one you are using. In this example, the model we use returns an “adsorption energy”.</p>
 </section>
@@ -949,7 +949,7 @@ O -&gt; 1/2 O2         re3 = -2.58 eV
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Utilizing large, graph-based, pre-trained  machine learned potentials in atomistic simulations</p>
+        <p class="prev-next-title">Intro and background on OCP and DFT</p>
       </div>
     </a>
     <a class="right-next"
@@ -977,7 +977,7 @@ O -&gt; 1/2 O2         re3 = -2.58 eV
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introduction to using OCP in molecular simulations</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Simple simulations using the OCP ASE calculator</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-adsorption-energies">Calculating adsorption energies</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>

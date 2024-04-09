@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Utilizing large, graph-based, pre-trained machine learned potentials in atomistic simulations &#8212; Open Catalyst Project Documentation</title>
+    <title>Intro and background on OCP and DFT &#8212; Open Catalyst Project Documentation</title>
   
   
   
@@ -61,7 +61,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorial/intro';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introduction to using OCP in molecular simulations" href="OCP-introduction.html" />
+    <link rel="next" title="Simple simulations using the OCP ASE calculator" href="OCP-introduction.html" />
     <link rel="prev" title="Common gotchas with OCP" href="gotchas.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -140,7 +140,7 @@
 
   
 
-<a class="navbar-brand logo" href="../core/README.html">
+<a class="navbar-brand logo" href="../index.html">
   
   
   
@@ -172,7 +172,7 @@
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../core/README.html">
+                <a class="reference internal" href="../index.html">
                     ocp by Open Catalyst Project
                 </a>
             </li>
@@ -212,12 +212,12 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Catalysis Tutorials</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Utilizing large, graph-based, pre-trained  machine learned potentials in atomistic simulations</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Intro and background on OCP and DFT</a></li>
 
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="OCP-introduction.html">Introduction to using OCP in molecular simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OCP-introduction.html">Simple simulations using the OCP ASE calculator</a></li>
 
 
 
@@ -514,7 +514,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Utilizing large, graph-based, pre-trained  machine learned potentials in atomistic simulations</h1>
+    <h1>Intro and background on OCP and DFT</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -524,7 +524,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Utilizing large, graph-based, pre-trained  machine learned potentials in atomistic simulations</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Intro and background on OCP and DFT</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#models">Models</a></li>
@@ -546,8 +546,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="utilizing-large-graph-based-pre-trained-machine-learned-potentials-in-atomistic-simulations">
-<h1>Utilizing large, graph-based, pre-trained  machine learned potentials in atomistic simulations<a class="headerlink" href="#utilizing-large-graph-based-pre-trained-machine-learned-potentials-in-atomistic-simulations" title="Link to this heading">#</a></h1>
+  <section id="intro-and-background-on-ocp-and-dft">
+<h1>Intro and background on OCP and DFT<a class="headerlink" href="#intro-and-background-on-ocp-and-dft" title="Link to this heading">#</a></h1>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="abstract">
 <h1>Abstract<a class="headerlink" href="#abstract" title="Link to this heading">#</a></h1>
@@ -566,25 +566,11 @@ document.write(`
 <p>The <a class="reference external" href="https://github.com/Open-Catalyst-Project">Open Catalyst Project (OCP)</a> is an umbrella for these machine learned potential models, data sets, and checkpoints from training.</p>
 <section id="models">
 <h2>Models<a class="headerlink" href="#models" title="Link to this heading">#</a></h2>
-<p>OCP provides several <a class="reference external" href="https://github.com/Open-Catalyst-Project/ocp/blob/main/MODELS.md">models</a>. Each model represents a different approach to featurization, and a different machine learning architecture. The models can be used for different tasks, and you will find different checkpoints associated with different datasets and tasks.</p>
-<ul class="simple">
-<li><p>CGCNN [<a class="reference external" href="https://arxiv.org/abs/1710.10324"><code class="docutils literal notranslate"><span class="pre">arXiv</span></code></a>] [<a class="reference external" href="https://github.com/Open-Catalyst-Project/ocp/blob/main/ocpmodels/models/cgcnn.py"><code class="docutils literal notranslate"><span class="pre">code</span></code></a>]</p></li>
-<li><p>SchNet [<a class="reference external" href="https://arxiv.org/abs/1706.08566"><code class="docutils literal notranslate"><span class="pre">arXiv</span></code></a>] [<a class="reference external" href="https://github.com/Open-Catalyst-Project/ocp/blob/main/ocpmodels/models/schnet.py"><code class="docutils literal notranslate"><span class="pre">code</span></code></a>]</p></li>
-<li><p>DimeNet [<a class="reference external" href="https://arxiv.org/abs/2003.03123"><code class="docutils literal notranslate"><span class="pre">arXiv</span></code></a>] [<a class="reference external" href="https://github.com/Open-Catalyst-Project/ocp/blob/main/ocpmodels/models/dimenet.py"><code class="docutils literal notranslate"><span class="pre">code</span></code></a>]</p></li>
-<li><p>ForceNet [<a class="reference external" href="https://arxiv.org/abs/2103.01436"><code class="docutils literal notranslate"><span class="pre">arXiv</span></code></a>] [<a class="reference external" href="https://github.com/Open-Catalyst-Project/ocp/blob/main/ocpmodels/models/forcenet.py"><code class="docutils literal notranslate"><span class="pre">code</span></code></a>]</p></li>
-<li><p>DimeNet++ [<a class="reference external" href="https://arxiv.org/abs/2011.14115"><code class="docutils literal notranslate"><span class="pre">arXiv</span></code></a>] [<a class="reference external" href="https://github.com/Open-Catalyst-Project/ocp/blob/main/ocpmodels/models/dimenet_plus_plus.py"><code class="docutils literal notranslate"><span class="pre">code</span></code></a>]</p></li>
-<li><p>SpinConv [<a class="reference external" href="https://arxiv.org/abs/2106.09575"><code class="docutils literal notranslate"><span class="pre">arXiv</span></code></a>] [<a class="reference external" href="https://github.com/Open-Catalyst-Project/ocp/blob/main/ocpmodels/models/spinconv.py"><code class="docutils literal notranslate"><span class="pre">code</span></code></a>]</p></li>
-<li><p>GemNet-dT [<a class="reference external" href="https://arxiv.org/abs/2106.08903"><code class="docutils literal notranslate"><span class="pre">arXiv</span></code></a>] [<a class="reference external" href="https://github.com/Open-Catalyst-Project/ocp/tree/main/ocpmodels/models/gemnet"><code class="docutils literal notranslate"><span class="pre">code</span></code></a>]</p></li>
-<li><p>PaiNN [<a class="reference external" href="https://arxiv.org/abs/2102.03150"><code class="docutils literal notranslate"><span class="pre">arXiv</span></code></a>] [<a class="reference external" href="https://github.com/Open-Catalyst-Project/ocp/tree/main/ocpmodels/models/painn"><code class="docutils literal notranslate"><span class="pre">code</span></code></a>]</p></li>
-<li><p>Graph Parallelism [<a class="reference external" href="https://arxiv.org/abs/2203.09697"><code class="docutils literal notranslate"><span class="pre">arXiv</span></code></a>] [<a class="reference external" href="https://github.com/Open-Catalyst-Project/ocp/tree/main/ocpmodels/models/gemnet_gp"><code class="docutils literal notranslate"><span class="pre">code</span></code></a>]</p></li>
-<li><p>GemNet-OC [<a class="reference external" href="https://arxiv.org/abs/2204.02782"><code class="docutils literal notranslate"><span class="pre">arXiv</span></code></a>] [<a class="reference external" href="https://github.com/Open-Catalyst-Project/ocp/tree/main/ocpmodels/models/gemnet_oc"><code class="docutils literal notranslate"><span class="pre">code</span></code></a>]</p></li>
-<li><p>SCN [<a class="reference external" href="https://arxiv.org/abs/2206.14331"><code class="docutils literal notranslate"><span class="pre">arXiv</span></code></a>] [<a class="reference external" href="https://github.com/Open-Catalyst-Project/ocp/tree/main/ocpmodels/models/scn"><code class="docutils literal notranslate"><span class="pre">code</span></code></a>]</p></li>
-<li><p>eSCN [<a class="reference external" href="https://arxiv.org/abs/2302.03655"><code class="docutils literal notranslate"><span class="pre">arXiv</span></code></a>] [<a class="reference external" href="https://github.com/Open-Catalyst-Project/ocp/tree/main/ocpmodels/models/escn"><code class="docutils literal notranslate"><span class="pre">code</span></code></a>]</p></li>
-</ul>
+<p>OCP provides several <a class="reference internal" href="../core/MODELS.html"><span class="doc std std-doc">models</span></a>. Each model represents a different approach to featurization, and a different machine learning architecture. The models can be used for different tasks, and you will find different checkpoints associated with different datasets and tasks.</p>
 </section>
 <section id="datasets-tasks">
 <h2>Datasets / Tasks<a class="headerlink" href="#datasets-tasks" title="Link to this heading">#</a></h2>
-<p>OCP provides several different <a class="reference external" href="https://github.com/Open-Catalyst-Project/ocp/blob/main/DATASET.md">datasets</a> that correspond to different tasks that range from predicting energy and forces from structures to Bader charges, relaxation energies, and others.</p>
+<p>OCP provides several different datasets like <a class="reference internal" href="../core/datasets/oc20.html"><span class="doc std std-doc">OC20</span></a> that correspond to different tasks that range from predicting energy and forces from structures to Bader charges, relaxation energies, and others.</p>
 </section>
 <section id="checkpoints">
 <h2>Checkpoints<a class="headerlink" href="#checkpoints" title="Link to this heading">#</a></h2>
@@ -676,7 +662,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Introduction to using OCP in molecular simulations</p>
+        <p class="prev-next-title">Simple simulations using the OCP ASE calculator</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -696,7 +682,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Utilizing large, graph-based, pre-trained  machine learned potentials in atomistic simulations</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Intro and background on OCP and DFT</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#models">Models</a></li>
